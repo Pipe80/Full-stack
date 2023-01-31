@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+
+<p id="tehtava_4"></p>
+
+<script>
+
+Array.prototype.max = function() {
+  return Math.max.apply(null, this);
+};
+
+
+let numbers = [1,2,3];
+//document.getElementById("tehtava_4").innerHTML = numbers;
+console.log(` ${numbers.max()}`);
+
+</script>
+</html>
