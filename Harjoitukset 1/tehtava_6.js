@@ -8,10 +8,10 @@ let tulosrivit = '';
 // Keskiarvo tulee tulostaa yhden desimaalin tarkkuudella (toFixed()-metodi)  
 // Liitä lopuksi muuttujiin keräämäsi data näytettäväksi P-elementissä getElementById/innerHTML-yhdistelmää käyttäen. 
 
-for (let osa of taulukko) {
-    tulosrivit += "taulukko[" + lukumaara + "] = " + osa + "<br>"
+for (let numero of taulukko) {
+    tulosrivit += "taulukko[" + lukumaara + "] = " + numero + "<br>"
     lukumaara++
-    summa += osa
+    summa += numero
 }
 
 keskiarvo = (summa / taulukko.length).toFixed(1)
