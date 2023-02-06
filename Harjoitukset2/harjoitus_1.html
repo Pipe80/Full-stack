@@ -17,26 +17,39 @@ summan laskemiseen laskeSumma(a, b)-funktiota, joka palauttaa (return) summan ko
     </style>
   </head>
     <body>
-        <form id="number_input">
-            Syötä vuosi:<br>
-            <input type="text" id="number"><br>
-            <button type="button" onclick="vastaukset(number_input.number.value)">
-               Laske luvut yhteen
-            </button>
-        </form>
+      <h1>JavaScript harjoitukset 2 <br></h1>
 
-    <h1>JavaScript harjoitukset</h1>
+      <form id="harjoitus_1">
+      
+        <input type="text" id="luku1"><br>
+        <input type="text" id="luku2"><br>
+        <button type="button" onclick="tulostaSumma(harjoitus_1.luku1.value, harjoitus_1.luku2.value)">Laske</button>
+     </form>
 
-    <p id="harjoitus_1"></p>
+<script>
 
-<script src="harjoitus_1.js">
+function laskeSumma(luku1,luku2) { 
 
-<form id="f">
-     <input type=text id="n1"><br>
-     <input type=text id="n2"><br>
-     <button type="button" onclick="tulostaSumma(f.n1.value, f.n2.value)">Laske</button>
-  </form>
+  const tulos= (luku1+ luku2);
+
+  return tulos;}
+laskeSumma();
+
+
+
+function fn2(luku) {
+ console.log(luku1 + luku2);
+}
+
+function lueSyote(callbackfunktio) {
+  var luku = prompt('Kirjota nimesi');
+  callbackfunktio(luku);
+}
+
+lueSyote(fn2); 
 
 </script>
+
+
   </body>
 </html>
