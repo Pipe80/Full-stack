@@ -17,7 +17,7 @@ function tarkistaKarkausVuosi(vuosi) {
     }
 }
 
-function print_results(vuosi) {
+function vastaukset(vuosi) {
     if (tarkistaKarkausVuosi(vuosi)) {
         tulokset.innerHTML = vuosi + " On karkausvuosi"
     } else {
