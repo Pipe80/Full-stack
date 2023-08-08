@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="tyyli.css" rel="stylesheet" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Harjoitukset 3, tehtävä 5, 6/6pistettä </title>
+    </head>
+
+    <body>
+        <div class="laatikko">
+            <br><br>
+                Choose color:<br><br>
+                <select id="color">
+                    <option value="#2F4F4F">DarkSlateGrey</option>
+                    <option value="#FF7F50">Koral</option>          
+                    <option value="#5F9EA0">CadetBlue</option>
+                </select><br><br>
+
+                What party?<br><br>
+                <input pattern="[a-zA-Z]*" type="text" id="juhla"></input><br><br>
+                <button type="button" id="vaihto">Change background color</button><br><br>
+                <div id="vari">
+                    <br>
+                        Results: <br>
+                        The chosen one: <span id="tulos">#E9967A</span><br>
+                        <br>
+                        <span id="juhlat"> </span>
+                    </br>
+                </div>
+          
+        </div>
+        <script>
+            function vaihto(vari, vaihtoVari) {
+                vari.innerHTML = vaihtoVari.value
+            }
+
+            function juhlatTulos(vari, input) {
+                vari.innerHTML = input.value
+            }
+//ei numeroita
+            function eiNumeroita(event) {
+                eiNumraa = event.currentTarget
+                eiNumraa.value = eiNumraa.value.replace(/[0-9]/g, "")
+            }
+
+            function varinMuutos(tuloss, value) {
+                tuloss.style.backgroundColor = value
+            }
+            nappi  = document.getElementById("vaihto")
+            color = document.getElementById("color")
+            tulos   = document.getElementById("tulos")
+            lopputulema    = document.getElementById("juhla")
+            juhlat   = document.getElementById("juhlat")            
+            variMuutos     = document.getElementById("vari")
+
+            lopputulema.addEventListener("input", (event) => eiNumeroita(event))
+            color.addEventListener("change", () => vaihto(tulos, color))
+            nappi.addEventListener("click", () => varinMuutos(variMuutos, color.value))
+        </script>
+    </body>
+</html>

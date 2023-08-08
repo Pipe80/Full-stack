@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <title>H3, Tehtävä 1, 4/4 pistettä</title>
+
+<!-- Tehtävä 1 [4p]
+Toteuta JavaScriptillä oheisen kuvan mukainen ohjelma. 
+Linkkitekstejä hiirellä klikattaessa alla olevassa tilassa näkyvän kuvan paikalle vaihdetaan linkkitekstiä vastaava kuva. 
+Oletuksena näytetään kuva1. Kolme linkkitekstiä ja niitä vastaavaa pientä kuvaa riittää. -->
+<style>
+    img {
+        max-width: 40%;
+    }
+</style>
+
+    <img src="./kuvat/auto1.jpg" id="vaihdaKuva">
+    <input type="button" onclick="vaihdaAuto1()" value="Auto 1" />
+    <input type="button" onclick="vaihdaAuto2()" value="Auto 2" />
+    <input type="button" onclick="vaihdaAuto3()" value="Auto 3" />
+
+    <script>
+
+function vaihdaAuto1() {
+        let kuva = document.getElementById('vaihdaKuva');
+           
+                kuva.src = "./kuvat/auto1.jpg";
+            
+        }
+        function vaihdaAuto2() {
+        let kuva2 = document.getElementById('vaihdaKuva');
+           
+           kuva2.src = "./kuvat/auto2.jpg";
+        }
+        function vaihdaAuto3() {
+        let kuva3 = document.getElementById('vaihdaKuva');
+           
+           kuva3.src = "./kuvat/auto3.jpg";
+        }
+
+    </script>
+
+
+
+</html>

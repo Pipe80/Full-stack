@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript harjoitukset 2</title>
+    <style>
+      body {
+
+        background: #5761d5;
+      }
+
+    </style>
+  </head>
+    <body>
+      <h1>JavaScript harjoitukset 2 <br></h1>
+
+
+<script>
+//ymmärrän tämän koodin toiminnan, mutta en tiedä osaanko selittää sitä virallisesti oikeilla termeillä, mutta
+//kokeillaan. myFunctionWithCallback annetaan parametreinä arvot p1, p2 ja callback. 
+//callback palauttaa arvot p1 ja p2. p1 arvo on kinkulla ja p2 arvo on juustolla. Luodaan
+//takaisinkutsu joka palauttaa annetut arvot. Ohjelma suoritetaan annettussa järjestyksessä.
+//console.logilla kirjataan tulos konsoliin.
+//4/4pistettä
+const myFunctionWithCallback = (p1, p2, callback) => {
+  return callback(p1, p2)
+}
+
+const myFunc = (p1, p2) => `Pitsa ${p1} ja ${p2}`
+const result = myFunctionWithCallback('kinkulla', 'juustolla', myFunc)
+console.log(result)
+
+
+</script>
+
+</body>
+</html>

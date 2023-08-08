@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <title>H3, Tehtävä 4, 6/6 pistettä</title>
+
+    <!-- SimpleToDo-sovellus, jonka ul-elementti (id="lista") on sivun latauksen jälkeen tyhjä. 
+    Lisää-painikkeella listaan voidaan lisätä tekstikenttään kirjoitettuja tehtäviä (li-elementtejä) 
+    ja Tyhjää lista -painikkeella listan voi tyhjätä alkutilaansa. 
+    Toimintojen vaikutukset tulee saada aikaan muokkaamalla dokumentin DOM-puuta.
+    Lisää sovellukseen ominaisuus, jolla myös yksittäisen tehtävän eli listan alkion voi poistaa listasta 
+    klikkaamalla yksinkertaisesti tehtävää listassa. Klikkaus tehtävän poistamiseksi tulee käsitellä 
+    addEventListener-tapahtumankuuntelijametodilla. -->
+<style>
+    button {
+        background-color:aquamarine;}
+</style>
+
+    <form id="todo"><h1>TODO:</h1><br><br>
+        <input type="text" id="tehtava"><br><br>
+        <button type="button" id="lisää">Lisää</button>
+        <button type="button" id="poista">Tyhjennä</button><br>
+    </form>
+
+    <ul id="tehtavat"></ul>
+
+    <script>
+
+function lisaaTehtava() {
+                uusiTehtava = document.getElementById("todo")
+                tehtavat = document.getElementById("tehtavat")
+                li = document.createElement("li")
+                li.appendChild(document.createTextNode(uusiTehtava.tehtava.value))
+                tehtavat.appendChild(li)
+                tehtavat.lastChild.addEventListener("click", (event) => poistaTehtava(event))
+                uusiTehtava.tehtava.value = ""
+            }
+
+            function poistaTehtavia() {
+                tehtavat = document.getElementById("tehtavat")
+                while (tehtavat.lastChild) {
+                    tehtavat.removeChild(tehtavat.lastChild)
+                }
+            }
+
+            function poistaTehtava(event) {
+                poistat = event.currentTarget
+                poistat.parentNode.removeChild(poistat)
+            }
+
+            task = document.getElementById("tehtava")
+            lisaa = document.getElementById("lisää")
+            poistaT  = document.getElementById("poista")
+        lisaa.addEventListener("click", () => lisaaTehtava())
+            poistaT.addEventListener("click", () => poistaTehtavia())   
+    </script>
+
+
+
+</html>

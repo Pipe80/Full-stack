@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript harjoitukset 2_5</title>
+    <style>
+      body {
+
+        background: #e18d39;
+      }
+
+    </style>
+  </head>
+    <body>
+      <h1>JavaScript harjoitukset 2 <br></h1>
+<!-- Tehtävä 5 [2/4p]
+Tee Person-funktio, jota kutsumalla voidaan luoda esim. person-olio, jolla on ominaisuudet: name, age, phone ja email. 
+Luotavalla oliolla tulee olla myös metodi, jonka jokaisella kutsukerralla olion age-muuttujan arvo kasvaa yhdellä. 
+Luo Person-funktiota käyttäen ainakin kolme eri oliota eri tiedoilla. Tulosta tiedot web-konsolille. 
+En ole yhtään varma, ymmärsinkö tehtävönantoa oikein-->
+<script>
+
+function Person(ihminen) {
+
+  this.person = ihminen;
+
+  const nimi = ["Tammi","Helmi","Huhti"];
+  const ika=[23,34,45];
+  const email = ["tammi@gmail.com","helmi@gmail.com","huhti@gmail.com"];
+  const puhelin = ["0504923456","0504923446","0504333456"];
+
+ this.palautaNimi = function(){
+  return nimi;
+ }
+ this.palautaIka = function() {
+    
+   return ika;
+}
+
+   this.palautaEmail = function() {
+   return email;
+ }
+ this.palautaPuh = function() {
+   return puhelin;
+ }
+ }
+
+const tammi = new Person("Tammi");
+const huhti = new Person("Huhti");
+
+console.log(huhti.person);
+huhti.palautaIka();
+console.log(huhti.palautaNimi()); 
+console.log(tammi.palautaIka()); 
+
+
+console.log(huhti.palautaEmail()); 
+console.log(huhti.palautaPuh()); 
+
+let ika = 45;
+let getId = () => ika++;
+
+let Tammi = {
+              ['Ikä : ' + getId()]: ika
+            };
+
+console.log(Tammi);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+div {
+    border: dashed;
+    max-width: 300px;
+    padding: 25px;
+    margin: 0 auto;             
+    text-align: center;
+}
+
+.laatikko {
+    background-color: rgb(54, 196, 231);
+    height: 444px;
+}
+
+button {
+    color: rgb(10, 9, 9);
+    background-color: rgb(148, 214, 232);
+    border: solid black;
+    padding: 10px;
+    margin: 8px;
+}
+
+#vari {
+    background-color: #bee9fb;
+    height: 88px;
+}

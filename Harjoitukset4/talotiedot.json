@@ -1,0 +1,39 @@
+{"talot":[
+   {
+      "image":"kuvat/talo1.jpg",
+      "address":"Lönnrotinkatu 3, 00120 , Helsinki",
+      "size":170,
+      "text":"Granholmin suunnittelema vuonna 1896 valmistunut Kivipalatsi Pyyn korttelissa kuuluu tnkin pivn Helsingin kauneimpiin rakennuksiin.",
+      "price":700000
+   },
+   {
+      "image":"kuvat/talo2.jpg",
+      "address":"Telakkakatu 3 A, 00150, Helsinki",
+      "size":180,
+      "text":"Keittist pariovet avaavat parvekkeen osaksi huonetilaa. Kaksi tilavaa kylpyhuonetta, toisessa amme. Joustavasti muunneltavia huonejakoja, paljon ikkunoita.",
+      "price":800000
+   },
+   {
+      "image":"kuvat/talo3.jpg",
+      "address":"Lönnrotinkatu 3, 00120, Helsinki",
+      "size":210,
+      "text":"Tmn rauhallisen, tydellisesti saneeratun ja muuttovalmiin huoneiston sisnkynti on suojaisan sispihan puolella. Huoneiden ikkunat antavat Yrjnkadulle, avokeittin ja kodinhoitohuoneen ikkunat ovat sispihalle.",
+      "price":900000
+   },
+   {
+
+      "image":"kuvat/talo4.jpg",
+      "address":"Kunnallisneuvoksentie 8 A, 00930 Helsinki",
+      "size":190,
+      "text":"Helsingin keskustan upeimmasta arvoyhtist on nyt tarjolla kaupungin parhaimmat keskustankymt. Historiallinen Lackmanin talo on tydellisesti saneerattu uuteen loistoonsa rakennusyhti Hartelan johdolla vuonna 2011 kaunista arkkitehtuuria kunnioittaen.",
+      "price":1100000
+   },
+   {
+
+      "image":"kuvat/talo5.jpg",
+      "address":"Katajaharjuntie 18, 00200 Helsinki",
+      "size":220,
+      "text":"Huikean kaunis ja laadukas kokonaisuus arvostetulla alueella meren lheisyydess Marjaniemess. Tm moitteettomassa kunnossa oleva ja hyvin suunniteltu talokaunotar on rakennettu vuonna 2000 ja kuntotarkastettu elokuussa 2014.",
+      "price":1200000
+   }
+]}

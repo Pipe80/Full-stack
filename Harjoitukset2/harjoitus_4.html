@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Tehtävä 4 [4p]
+Tee sovellus, joka web-sivun ensimmäisen latauksen jälkeen näyttää selainikkunassa tekstin 
+OMG - Lady Gaga start singing!. Tämän jälkeen konsertissa alkaa ilotulitus. 
+Lisää edellisen tekstin alapuolelle viiden sekunnin välein aina uusi teksti NICE - fireworks!. 
+Voit itse päättää kuinka monta kertaa edellä mainittu teksti lisätään. 
+Kaikki aiemmin lisätyt tekstit pysyvät näytöllä esimerkkitulostuksen mukaisesti. 
+Lopuksi jonkun ajan kuluttua (voit itse päättää ajan)  edellisten tekstien alapuolelle tulee lisätä 
+teksti WOW - It was the best concert in my life....
+Esimerkkitulostus:
+OMG - Lady Gaga start singing!
+NICE - fireworks!
+NICE - fireworks!
+NICE - fireworks!
+NICE - fireworks!
+WOW - It was the best concert in my life... -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript harjoitukset 2_4</title>
+    <style>
+      body {
+
+        background: #e18d39;
+      }
+
+    </style>
+  </head>
+    <body>
+      <h1>JavaScript harjoitukset 2 <br></h1>
+
+<script>
+const print = (str, taskTime) => {
+    setTimeout(function() {
+      console.log(`${str}!`)
+    }, taskTime)
+  }
+  
+  const execute = (str, taskTime, callback)  => {  
+    callback(str, taskTime)
+  }
+  console.log('OMG - Lady Gaga start singing!');
+
+  execute('NICE - fireworks again!', 3000, print)
+  
+  execute('NICE - fireworks again and again!', 5000, print)
+  
+  execute('NICE - fireworks!', 1500, print)
+
+  execute('WOW - It was the best concert in my life....', 7000, print)
+
+</script>
+
+</body>
+</html>

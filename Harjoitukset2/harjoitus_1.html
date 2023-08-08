@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- tulostaSumma(a, b)-funktio ottaa parametrinaan lomakkeen kenttiin syötetyt luvut (merkkijonot) 
+ja tulostaa lopputuloksen div-elementtiin (id=results). tulostaSumma(a, b)-funktio käyttää 
+summan laskemiseen laskeSumma(a, b)-funktiota, joka palauttaa (return) summan kokonaislukuna.  -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript harjoitukset 2</title>
+    <style>
+      body {
+
+        background: #56f94a;
+      }
+
+    </style>
+  </head>
+    <body>
+      <h1>JavaScript harjoitukset 2 <br></h1>
+
+      <form id="harjoitus_1">
+      
+        <input type="text" id="luku1"><br>
+        <input type="text" id="luku2"><br>
+        <button type="button" onclick="tulostaSumma(harjoitus_1.luku1.value, harjoitus_1.luku2.value)">Laske</button>
+     </form>
+     
+     <p id="result"></p>
+<script>
+//4/4pistettä
+let result = document.getElementById("result")
+
+function tulostaSumma(luku1,luku2) 
+{ 
+  let tulos= parseInt(luku1) + parseInt(luku2);
+ result.innerHTML = "Yhteensä = " + tulos;
+}
+  
+console.log(tulostaSumma(result));
+
+</script>
+
+</body>
+</html>

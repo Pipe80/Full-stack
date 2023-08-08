@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript harjoitukset 2_6</title>
+    <style>
+      body {
+
+        background: #e18d39;
+      }
+
+    </style>
+  </head>
+    <body>
+      <div id="vauhtilaskin">
+        <form id="napit">
+            <span>Tunnit: </span><input type=text id="tunti" value="0"><br>
+            <span>Minuutit: </span><input type=text id="minuutti" value="0"><br>
+            <span>Sekunnit: </span><input type=text id="sekunti" value="0"><br>
+            <span>Kilometrit: </span><input type=text id="kilsa" value="0"><br>
+            <button id="nappi" type="button">Laske vauhdit</button>
+        </form>
+    </div>
+      <h1>JavaScript harjoitukset 2 <br></h1>
+<!-- Tehtävä 6 [2/6p]
+  minulla meni liian kauan aikaa yrittääkseni selvittää tätä tehtävää, löin hanskat tiskiin kun olin
+  jumittanut liian kauan.
+
+vauhtilaskin. Ohjelma laskee syötettyjen arvojen perusteella liikkujalle 
+sekä km/h- että min:sec/km-vauhdin. Tulokset näytetään kahden desimaalin tarkkuudella. 
+Lomakkeessa tulee olla syötteille sopivat oletusarvot ja niille ei tarvitse tehdä tarkistuksia. 
+Erikoisille syötteille ei tarvitse myöskään muotoilla tulostuksia, vauhti voidaan tulostaa vaikka 3456:45/km
+Toteutus tulee tehdä Vauhtilaskin-luokkana class-määreellä määriteltynä. Syötetyt arvot tulee asettaa constructor-metodissa 
+luokasta luotavan olion ominaisuuksiksi. Vauhdit tulee laskea metodeilla calcKmhPace() ja calcMinkmPace(). 
+Vauhdit palauitetaan "getter"-metodeilla kmhpace() ja minkmpace().  -->
+<script>
+let h=0;
+let min=0;
+let sec=0;
+let kilometrit=0;
+let km=0;
+// kmh-laskentaa
+let tunnit = parseInt(h)+(parseInt(min)*60+parseInt(sec))/3600;
+let kmh = kilometrit/tunnit;
+
+
+// min.sec/km-laskentaa
+let sekunnit = parseInt(h)*60*60+parseInt(min)*60+parseInt(sec);
+sekunnitPerKm = sekunnit/km;
+
+let minutes = 0;
+
+while (sekunnitPerKm >= 60){
+  minutes++;
+  sekunnitPerKm = sekunnitPerKm - 60;
+}
+sekunnitPerKm = Math.round(sekunnitPerKm);
+sekunnitPerKm = String('0'+ sekunnitPerKm).slice(-2);
+
+class Person {
+  constructor(name, height, weight) {
+    this.name = name;
+    this.height = height;
+    this.weight = weight;
+  }
+  // Getter
+  get bmi() {
+    return this.calcBmi();
+  }
+
+  // Setter
+  set pituus(h) {
+    this.height = h;
+  }
+
+  // Metodi
+  calcBmi() {
+    return this.weight/(this.height/100 * this.height/100);
+  }
+}
+
+const pipe = new Person("Pipe", 290, 90);
+pipe.pituus = 190;
+console.log (pipe.name, pipe.height, pipe.weight, pipe.bmi);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>H3, Tehtävä 2, 4/4 pistettä</title>
+
+<script>
+    let hcpdata = [{ "name": "Ari", "hcp": 54 },
+                { "name": "Pasi", "hcp": 5 },
+                { "name": "Seppo", "hcp": 20 }];
+
+    function tulokset(array) {
+        listaHcp = document.getElementById("listaHcp")
+        listaHcp.innerHTML = ""
+        for (hcp of hcpdata) {
+            listaHcp.innerHTML += "<li>" + hcp.name + " " + hcp.hcp + "</li>"
+        }
+    }
+</script>
+
+</head>
+<body>
+    <button onclick="tulokset(hcpdata)">Tulosta tasoitukset</button>
+    <ul id="listaHcp"></ul>
+</body>
+</html>

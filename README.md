@@ -1,4 +1,15 @@
-# Full stack
-Koulun harjoitustehtäviä
+# Fullstack
 
-![Nimetön](https://user-images.githubusercontent.com/59684493/215749709-4246a0aa-7154-4796-9469-930e619d6a67.jpg)
+Mure Pirjo N5589
+
+Ratkaisut: https://student.labranet.jamk.fi/~N5589/fullstack_harjoitukset/
+
+
+Harjoitustehtäväpisteet:   121/189
+
+Kaikki tarjolla olleet harjoitustehtäväpisteet:   189
+
+121/189 = > 64 %
+
+
+
